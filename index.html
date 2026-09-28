@@ -19,17 +19,16 @@
 .spot.hasRange .spotName{color:#22c55e}
 .spot.noRange .spotName{color:#ef4444}
 .spotStatus{display:none}
-#main{flex:1;min-width:0;height:100vh;display:flex;flex-direction:column}#top{height:180px;min-height:180px;background:#151920;border-bottom:1px solid #343b47;display:flex;align-items:flex-start;position:relative;padding:18px 20px;gap:10px;box-sizing:border-box}
-#title{font-size:17px;font-weight:800;line-height:28px;margin-top:22px;padding-bottom:12px;border-bottom:2px solid #596474;width:100%;box-sizing:border-box}#macroButtons{display:flex;gap:36px;align-items:center;position:absolute;left:20px;top:128px;z-index:2}#macroButtons button,#homeBtn{display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 30px;background:#1b2028;color:#fff;border:2px solid #4a5361;border-radius:10px;font-size:16px;font-weight:900;text-decoration:none;cursor:pointer;box-shadow:0 2px 8px #0006}#macroButtons button:hover,#homeBtn:hover{background:#252b35;border-color:#2f80ff;color:#fff}#macroButtons button.active{background:linear-gradient(180deg,#ffd84d,#f0a900);color:#111;border:3px solid #fff;box-shadow:0 0 0 3px #ffd84d55,0 5px 14px #0008,0 0 22px #ffd84d88;transform:translateY(-1px)}#macroButtons button:hover{background:#2f80ff;color:#fff;border-color:#fff;box-shadow:0 0 0 2px #2f80ff66,0 5px 14px #0008;transform:translateY(-1px)}#macroButtons button:active{transform:translateY(2px);box-shadow:0 2px 5px #0008}#macroHome{display:none;position:absolute;left:20px;top:194px;z-index:2}
+#main{flex:1;min-width:0;height:100vh;display:flex;flex-direction:column;--top-h:clamp(155px,24vh,255px)}#top{height:var(--top-h);min-height:var(--top-h);background:#151920;border-bottom:1px solid #343b47;display:flex;align-items:flex-start;position:relative;padding:18px 20px;gap:10px;box-sizing:border-box}
+#title{font-size:17px;font-weight:800;line-height:28px;margin-top:22px;padding-bottom:12px;border-bottom:2px solid #596474;width:100%;box-sizing:border-box}#help{font-size:11px;color:#929dab;position:absolute;right:20px;top:13px}#macroButtons{display:flex;gap:36px;align-items:center;position:absolute;left:20px;top:128px;z-index:2}#macroButtons button,#homeBtn{display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 30px;background:#1b2028;color:#fff;border:2px solid #4a5361;border-radius:10px;font-size:16px;font-weight:900;text-decoration:none;cursor:pointer;box-shadow:0 2px 8px #0006}#macroButtons button:hover,#homeBtn:hover{background:#252b35;border-color:#2f80ff;color:#fff}#macroButtons button.active{background:linear-gradient(180deg,#ffd84d,#f0a900);color:#111;border:3px solid #fff;box-shadow:0 0 0 3px #ffd84d55,0 5px 14px #0008,0 0 22px #ffd84d88;transform:translateY(-1px)}#macroButtons button:hover{background:#2f80ff;color:#fff;border-color:#fff;box-shadow:0 0 0 2px #2f80ff66,0 5px 14px #0008;transform:translateY(-1px)}#macroButtons button:active{transform:translateY(2px);box-shadow:0 2px 5px #0008}#macroHome{display:none;position:absolute;left:20px;top:194px;z-index:2}
 #homeBtn{background:linear-gradient(180deg,#ff4d4d,#c91616);color:#fff;border:3px solid #ff7a7a;box-shadow:0 0 0 2px #ff3b3b55,0 5px 16px #0009,0 0 18px #ff303066}
 #homeBtn:hover{background:linear-gradient(180deg,#ff6666,#e01818);border-color:#fff;color:#fff;box-shadow:0 0 0 3px #ff555566,0 5px 18px #0009,0 0 22px #ff303099}
 #homeBtn:active{transform:translateY(2px);box-shadow:0 2px 6px #0009}
-#serverArea{position:absolute;right:20px;top:128px;z-index:5}
-#serverBtn{display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 30px;background:#1b2028;color:#2f80ff;border:2px solid #4a5361;border-radius:10px;font-size:16px;font-weight:900;text-decoration:none;cursor:pointer;box-shadow:0 2px 8px #0006}
+#serverArea{position:absolute;right:20px;top:calc(var(--top-h) - 115px);z-index:5}
+#serverBtn{display:inline-flex;align-items:center;justify-content:center;height:54px;width:158px;padding:0;background:#1b2028;color:#2f80ff;border:2px solid #4a5361;border-radius:10px;font-size:16px;font-weight:900;text-decoration:none;cursor:pointer;box-shadow:0 2px 8px #0006}
 #serverBtn:hover{background:#252b35;border-color:#2f80ff;color:#4aa3ff;box-shadow:0 0 0 2px #2f80ff66,0 5px 14px #0008;transform:translateY(-1px)}
-#serverBtn:active{transform:translateY(2px);box-shadow:0 2px 5px #0008}
-#viewer{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:auto;padding:15px}
-.rangeBox{background:#07090c;border:1px solid #3c4450;border-radius:9px;padding:7px}.rangeBox img{display:block;max-width:calc(100vw - 400px);max-height:calc(100vh - 105px);object-fit:contain;cursor:zoom-in}
+#serverBtn:active{transform:translateY(2px);box-shadow:0 2px 5px #0008}#viewer{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:auto;padding:15px}
+.rangeBox{background:#07090c;border:1px solid #3c4450;border-radius:9px;padding:7px}.rangeBox img{display:block;max-width:calc(100vw - 400px);max-height:calc(100vh - var(--top-h) - 30px);object-fit:contain;cursor:zoom-in}
 .empty{border:1px dashed #4a5361;border-radius:10px;padding:55px 45px;text-align:center;color:#9da7b5}.empty strong{display:block;color:#e8ecf2;font-size:18px;margin-bottom:8px}
 #zoom{position:fixed;z-index:100;inset:0;background:#000e;display:none;align-items:center;justify-content:center;cursor:zoom-out}#zoom img{max-width:97vw;max-height:96vh;object-fit:contain}
 
@@ -51,11 +50,11 @@
 #menu.clean50x .spot50x .spotName{font-size:18px;font-weight:900;line-height:1.25}
 </style>
 <style id="final-layout-fix">
-#top{height:255px !important;min-height:255px !important;padding:18px 20px !important;}
+#top{height:var(--top-h) !important;min-height:var(--top-h) !important;padding:18px 20px !important;}
 #title{margin-top:22px !important;padding-bottom:12px !important;width:100% !important;}
-#macroButtons{position:absolute !important;left:20px !important;top:140px !important;display:flex !important;flex-direction:row !important;gap:28px !important;align-items:center !important;margin:0 !important;}
+#macroButtons{position:absolute !important;left:20px !important;top:calc(var(--top-h) - 115px) !important;display:flex !important;flex-direction:row !important;gap:28px !important;align-items:center !important;margin:0 !important;}
 #macroButtons button{width:158px !important;height:54px !important;padding:0 !important;margin:0 !important;}
-#macroHome{position:absolute !important;left:206px !important;top:140px !important;margin:0 !important;}
+#macroHome{position:absolute !important;left:206px !important;top:calc(var(--top-h) - 115px) !important;margin:0 !important;}
 #homeBtn{width:158px !important;height:54px !important;padding:0 !important;margin:0 !important;}
 #homeBtn{background:linear-gradient(180deg,#ff3f3f,#c90000) !important;color:#fff !important;border:3px solid #ff8a8a !important;box-shadow:0 0 0 3px #ff3b3b55,0 5px 18px #0009,0 0 24px #ff303088 !important;}
 #homeBtn:hover{background:linear-gradient(180deg,#ff6666,#e01818) !important;border-color:#fff !important;}
@@ -63,7 +62,8 @@
 </head><body>
 <div id="app"><aside id="sidebar"><div id="brand">FrutanFratan <span id="brandMode"></span></div><div id="subtitle">Poker Preflop Viewer</div>
 <input id="search" placeholder="Cerca spot..."><div id="counter"></div><div id="menu"></div></aside>
-<main id="main"><div id="top"><div id="title">Seleziona uno spot</div><div id="macroButtons"><button type="button" data-macro="coinpoker">CoinPoker</button><button type="button" data-macro="range50x">Range50x</button></div><div id="macroHome"><button type="button" id="homeBtn">← Home</button></div><div id="serverArea">
+<main id="main"><div id="top"><div id="title">Seleziona uno spot</div><div id="macroButtons"><button type="button" data-macro="coinpoker">CoinPoker</button><button type="button" data-macro="range50x">Range50x</button></div><div id="macroHome"><button type="button" id="homeBtn">← Home</button></div><div id="help">Click categoria → scheda · Click scheda → contenuto</div>
+<div id="serverArea">
   <a id="serverBtn" href="https://frutannfratann.tail8be34f.ts.net/apps/files/files" target="_blank" rel="noopener noreferrer">Server</a>
 </div>
 </div>
